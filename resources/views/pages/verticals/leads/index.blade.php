@@ -23,9 +23,7 @@
     </div>
     <a href="{{ route('leads.create') }}"
        class="inline-flex items-center gap-2 rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-brand-600 transition">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+        <x-icon name="plus" class="w-4 h-4" />
         Add Lead
     </a>
 </div>
@@ -149,7 +147,8 @@
                         <td class="px-5 py-4">
                             <div class="flex items-center gap-3">
                                 <a href="{{ route('leads.show', $lead['id']) }}"
-                                   class="text-brand-500 hover:text-brand-600 text-xs font-medium">
+                                   class="inline-flex items-center gap-1 text-brand-500 hover:text-brand-600 text-xs font-medium">
+                                    <x-icon name="eye" class="w-3.5 h-3.5" />
                                     View
                                 </a>
                                 <form method="POST"
@@ -159,7 +158,8 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit"
-                                        class="text-red-500 hover:text-red-600 text-xs font-medium">
+                                        class="inline-flex items-center gap-1 text-red-500 hover:text-red-600 text-xs font-medium">
+                                        <x-icon name="trash" class="w-3.5 h-3.5" />
                                         Delete
                                     </button>
                                 </form>

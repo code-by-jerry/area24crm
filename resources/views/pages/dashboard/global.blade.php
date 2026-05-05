@@ -39,8 +39,9 @@
                         @csrf
                         <input type="hidden" name="vertical" value="{{ $slug }}" />
                         <button type="submit"
-                            class="text-xs font-medium text-brand-500 hover:text-brand-600 transition">
-                            Open →
+                            class="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 transition">
+                            Open
+                            <x-icon name="arrow-right" class="w-4 h-4" />
                         </button>
                     </form>
                 </div>
